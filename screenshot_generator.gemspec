@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Tom Lea"]
   spec.email         = ["commit@tomlea.co.uk"]
   spec.summary       = %q{A simple wrapper around FFMpeg for extracing screen shots}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/cwninja/screenshot_generator"
   spec.license       = "WTFBPPL"
 
   spec.files         = `git ls-files`.split($/)
