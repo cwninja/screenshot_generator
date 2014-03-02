@@ -38,7 +38,7 @@ class ScreenshotGenerator
       path = dir + "#{index}.jpg"
       segment_size = length / (count + 2)
       offset = (index + 1) * segment_size
-      extract_frame(offset, path)
+      extract_frame(offset, path) unless path.exist?
     end
   end
 
