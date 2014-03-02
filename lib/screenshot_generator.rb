@@ -56,7 +56,10 @@ protected
   end
 
   def self.ffmpeg
-    @ffmpeg ||= `which ffmpeg`.chomp
+    @ffmpeg ||= [
+      `which avconv`.chomp,
+      `which ffmpeg`.chomp
+    ].find{|v| !v.empty? }
   end
 
   def get_length
