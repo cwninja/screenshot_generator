@@ -13,7 +13,9 @@ class ScreenshotGenerator
   def initialize(video, size: '640x400')
     @video = video
     @size = size
-    raise ArgumentError, "Video does not exist" unless File.exist? @video
+    unless @video =~ /^http/
+      raise ArgumentError, "Video does not exist" unless File.exist? @video
+    end
   end
 
   attr_reader :video, :size
